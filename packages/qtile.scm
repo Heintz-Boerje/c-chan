@@ -1,10 +1,10 @@
-(define-module (custom-channel packages qtile)
-#:use-module (guix packages)
-#:use-module (gnu packages base)
-#:use-module (guix download)
-#:use-module (guix build-system python)
-#:use-module (guix licenses)
-#:use-module (gnu packages wm))
+(define-module (c-chan packages qtile)
+  #:use-module (guix packages)
+  #:use-module (gnu packages base)
+  #:use-module (guix download)
+  #:use-module (guix build-system python)
+  #:use-module (guix licenses)
+  #:use-module (gnu packages wm))
 
 (define-public qtile
 (package
