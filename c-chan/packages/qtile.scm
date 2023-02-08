@@ -9,6 +9,7 @@
 
 (define-public qtile
   (package
+      (name "qtile")
       (inherit qtile)
       (version "0.22.1")
       (source (origin
