@@ -1,3 +1,3 @@
 (channel
  (version 0)
- (directory "packages"))
+ (url "https://github.com/Heintz-Boerje/c-chan"))
