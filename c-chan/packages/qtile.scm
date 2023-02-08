@@ -7,9 +7,9 @@
   ; #:use-module (guix build-system python)
   ; #:use-module (guix licenses)
 
-(define-public qtile
+(define-public qtile-up
   (package
-      (name "qtile")
+      (name "qtile-22")
       (inherit qtile)
       (version "0.22.1")
       (source (origin
@@ -17,14 +17,4 @@
                 (uri (pypi-uri "qtile" version))
                 (sha256
                  (base32
-                  "12wg8y33xgb0x0gd9xfylxss97p97dy1cy52yln64493fi6wphr7")
-          
-         )
-     
-    )
-   
-  )
-  
- )
- 
-)
+                  "12wg8y33xgb0x0gd9xfylxss97p97dy1cy52yln64493fi6wphr7"))))))
