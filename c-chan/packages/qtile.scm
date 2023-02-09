@@ -1,8 +1,8 @@
-(use-modules (gnu packages wm)
-              (guix packages)
-              (guix download)
-              (guix build-system python)
-)
+(define-module (c-chan packages qtile-22)
+  #:use-module (gnu packages wm)
+  #:use-module  (guix packages)
+  #:use-module  (guix download)
+  #:use-module  (guix build-system python))
 
 (define qtile-0.22.1
   (package
