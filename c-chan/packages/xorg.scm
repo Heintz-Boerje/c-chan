@@ -1,4 +1,4 @@
-(define-module (channel-x packages xorg)
+(define-module (c-chan packages xorg)
   #:use-module (guix packages)
   #:use-module (gnu packages gl)
   #:use-module (gnu packages xorg)
