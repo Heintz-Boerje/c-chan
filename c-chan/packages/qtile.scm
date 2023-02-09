@@ -4,7 +4,7 @@
   #:use-module  (guix download)
   #:use-module  (guix build-system python))
 
-(define qtile-0.22.1
+(define-public qtile-0.22.1
   (package
     (inherit qtile)
     (version "0.22.1")
