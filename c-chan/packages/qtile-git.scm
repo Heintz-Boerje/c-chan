@@ -13,7 +13,7 @@
     (source (origin
               (method git-fetch)
               (uri (git-reference
-                        (url "https://github.com/qtile/qtile.git")
+                        (url "https://github.com/qtile/qtile")
                         (commit "4c69fca361bcb1d9753b37b9b903af32b27983c5")))
               (sha256
              (base32
