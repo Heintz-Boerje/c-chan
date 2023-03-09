@@ -33,4 +33,4 @@
                   (assoc-ref inputs "pango") "/lib/libpango-1.0.so.0\")\n"))
                 (("^pangocairo = ffi.dlopen.*")
                  (string-append "pangocairo = ffi.dlopen(\""
-                  (assoc-ref inputs "pango") "/lib/libpangocairo-1.0.so.0\")\n"))))))
+                  (assoc-ref inputs "pango") "/lib/libpangocairo-1.0.so.0\")\n"))))))))
