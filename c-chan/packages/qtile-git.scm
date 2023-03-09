@@ -18,4 +18,19 @@
               (sha256
              (base32
               "0mvn8k1jp6qhj84x5syc6rdld3zs79q73mfgym61x4ryp7bpxzbk"))
-              ))))
+              )))(arguments
+     `(#:tests? #f ; Tests require Xvfb and writable temp/cache space
+       #:phases
+       (modify-phases %standard-phases
+         (add-after 'patch-paths
+           (lambda* (#:key inputs #:allow-other-keys)
+             (substitute* "libqtile/pangocffi.py"
+               (("^gobject = ffi.dlopen.*")
+                 (string-append "gobject = ffi.dlopen(\""
+                  (assoc-ref inputs "glib") "/lib/libgobject-2.0.so.0\")\n"))
+                (("^pango = ffi.dlopen.*")
+                 (string-append "pango = ffi.dlopen(\""
+                  (assoc-ref inputs "pango") "/lib/libpango-1.0.so.0\")\n"))
+                (("^pangocairo = ffi.dlopen.*")
+                 (string-append "pangocairo = ffi.dlopen(\""
+                  (assoc-ref inputs "pango") "/lib/libpangocairo-1.0.so.0\")\n"))))))
