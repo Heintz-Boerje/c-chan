@@ -8,6 +8,7 @@
 (define-public qtile-git
   (package
     (inherit qtile)
+   (name "qtile-git")
     (version "0.22.2")
     (source (origin
               (method git-fetch)
