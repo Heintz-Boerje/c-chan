@@ -5,7 +5,7 @@
   #:use-module  (guix build-system python))
 
 (package
-  (name "python-qtile")
+  (name "qtile-23")
   (version "0.23.0")
   (source
    (origin
