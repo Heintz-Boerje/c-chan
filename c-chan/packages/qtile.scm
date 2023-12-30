@@ -1,11 +1,12 @@
-(define-module (c-chan packages qtile-23)
-  #:use-module (gnu packages wm)
+(define-module (c-chan packages qtile)
   #:use-module  (guix packages)
   #:use-module  (guix download)
-  #:use-module  (guix build-system python))
+  #:use-module (guix licenses)
+  #:use-module  (guix build-system python)
+  #:use-module (guix build-system pyproject))
 
 ;; ( package
-;;   (name "qtile-23")
+;;   (name "qtile")
 ;;   (version "0.23.0")
 ;;   (source
 ;;    (origin
@@ -22,9 +23,9 @@
 ;;   (description "This package provides a pure-Python tiling window manager.")
 ;;   (license license:expat)
 ;;  )
-
+(define-public qtile
 (package
-  (name "python-qtile")
+  (name "qtile")
   (version "0.22.1")
   (source
    (origin
@@ -36,6 +37,8 @@
   (propagated-inputs (list python-cairocffi python-cffi python-xcffib))
   (native-inputs (list python-bowler python-dbus-next python-pygobject
                        python-pytest))
-  (home-page "")
+  (home-page "qtile.org")
   (synopsis "A pure-Python tiling window manager.")
   (description "This package provides a pure-Python tiling window manager.")
+  (license expat))
+)
