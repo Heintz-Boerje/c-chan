@@ -5,40 +5,20 @@
   #:use-module  (guix build-system python)
   #:use-module (guix build-system pyproject))
 
-;; ( package
-;;   (name "qtile")
-;;   (version "0.23.0")
-;;   (source
-;;    (origin
-;;      (method url-fetch)
-;;      (uri (pypi-uri "qtile" version))
-;;      (sha256
-;;       (base32 "1v8rxm2xg2igxv6gwa78wrkxzgfxmxfgflbjdp4fm7cxjdx3zrpa"))))
-;;   (build-system pyproject-build-system)
-;;   (propagated-inputs (list python-cairocffi python-cffi python-xcffib))
-;;   (native-inputs (list python-bowler python-dbus-next python-pygobject
-;;                        python-pytest))
-;;   (home-page "")
-;;   (synopsis "A pure-Python tiling window manager.")
-;;   (description "This package provides a pure-Python tiling window manager.")
-;;   (license license:expat)
-;;  )
 (define-public qtile
 (package
   (name "qtile")
-  (version "0.22.1")
+  (version "0.25.1")
   (source
    (origin
      (method url-fetch)
      (uri (pypi-uri "qtile" version))
      (sha256
-      (base32 "12wg8y33xgb0x0gd9xfylxss97p97dy1cy52yln64493fi6wphr7"))))
+      (base32 "04gwcgip7469zq0vivrq2ppw25f3v99kymhhr1740z7137q0yyc"))))
   (build-system pyproject-build-system)
-  (propagated-inputs (list python-cairocffi python-cffi python-xcffib))
-  (native-inputs (list python-bowler python-dbus-next python-pygobject
-                       python-pytest))
-  (home-page "qtile.org")
+  (arguments '(#:test? #f))
+  (propagated-inputs (list python-cairocffi python-cffi python-xcffib python-dbus-next))
+  (home-page "https://qtile.org")
   (synopsis "A pure-Python tiling window manager.")
   (description "This package provides a pure-Python tiling window manager.")
-  (license expat))
-)
+  (license expat)))
